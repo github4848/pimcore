@@ -12,6 +12,7 @@ Please note that the portfolio of available operators (and how they work in deta
 * [AnyGetter](./Operators/02_AnyGetter.md)
 * [Arithmetic](./Operators/03_Arithmethic.md)
 * [AssetMetadata](./Operators/04_AssetMetadataGetter.md)
+* [Base64](./Operators/04a_Base64.md)
 * [Boolean](./Operators/05_Boolean.md)
 * [Boolean Formatter](./Operators/06_BooleanFormatter.md)
 * [CaseConverter](./Operators/07_CaseConverter.md)
