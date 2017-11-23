@@ -89,6 +89,7 @@ pimcore.object.helpers.gridConfigDialog = Class.create({
                     iconCls: "pimcore_icon_save",
                 handler: function () {
                 if (!this.nameField.getValue()) {
+                    this.tabPanel.setActiveTab(this.savePanel);
                     Ext.Msg.show({
                         title: t("error"),
                         msg: t('name_must_not_be_empty'),
@@ -506,7 +507,7 @@ pimcore.object.helpers.gridConfigDialog = Class.create({
                                         var ownerTree = this.selectionPanel;
 
                                         if (record.data.dataType == "classificationstore") {
-                                            window.setTimeout(function () {
+                                            setTimeout(function () {
                                                 var ccd = new pimcore.object.classificationstore.columnConfigDialog();
                                                 ccd.getConfigDialog(ownerTree, copy, this.selectionPanel);
                                             }.bind(this), 100);
@@ -759,7 +760,6 @@ pimcore.object.helpers.gridConfigDialog = Class.create({
         var tree = new Ext.tree.TreePanel({
             title: t('operators'),
             collapsible: true,
-            // collapsed: true,
             xtype: "treepanel",
             region: "south",
             autoScroll: true,
